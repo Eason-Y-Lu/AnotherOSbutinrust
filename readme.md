@@ -11,8 +11,10 @@ cargo build
 but of course, you need to make sure you also
 
 ```
-rustup toolchain add x86_64-unknown-none
-rustup override set x86_64-unknown-none
+rustup override set nightly
+rustup target install x86_64-unknown-none
+rustup component add rust-src
+rustup component add llvm-tools
 ```
 
 first.
