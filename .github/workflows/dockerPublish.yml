@@ -9,7 +9,7 @@ on:
   schedule:
     - cron: '43 11 * * *'
   push:
-    branches: [ "master", "dockerImageCI"]
+    branches: [ "master"]
     # Publish semver tags as releases.
     tags: [ 'v*.*.*' ]
   pull_request:
