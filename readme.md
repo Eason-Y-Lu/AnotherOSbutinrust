@@ -8,12 +8,12 @@ Made in rust with like, 2 crates
 
 If you have Docker installed you can just do
 
+> [!NOTE]
+> If you didn't follow the docker installion instructions, you might need to run it as root.
+
 ```bash
 ./linuxDocker.sh
 ```
-
-> [!NOTE]
-> If you didn't follow the docker installion instructions, you might need to run it as root.
 
 ### From source
 
