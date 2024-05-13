@@ -4,6 +4,19 @@ Made in rust with like, 2 crates
 
 ## Build
 
+### With Docker on Linux
+
+If you have Docker installed you can just do
+
+```bash
+./linuxDocker.sh
+```
+
+> [!NOTE]
+> If you didn't follow the docker installion instructions, you might need to run it as root.
+
+### From source
+
 ```bash
 cargo build
 ```

@@ -1,5 +1,5 @@
 #! /bin/bash
-xauth list > xauth.txt
+xauth list >xauth.txt
 docker build -t anotheros .
 docker run -d --name another_os --net=host --volume /tmp/.X11-unix:/tmp/.X11-unix --env DISPLAY=$DISPLAY anotheros sleep 120
 docker cp xauth.txt another_os:xauth.txt
