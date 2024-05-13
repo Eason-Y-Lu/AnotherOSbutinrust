@@ -11,8 +11,7 @@ If you have Docker installed you can just do:
 ./linuxDocker.sh
 ```
 
-After you are done, and you exited the container, it will be removed.
-However if there is a error in that procress, you could stop and remove the container with:
+You can stop the container with the following command:
 
 ```bash
 ./stop.sh
