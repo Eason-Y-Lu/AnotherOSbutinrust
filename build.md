@@ -19,17 +19,25 @@ You can stop the container with the following command:
 
 ## From source
 
+### Setup rust dependencies
+
 ```bash
-cargo build
-```
-
-but of course, you need to make sure you also
-
-```
 rustup override set nightly
 rustup target install x86_64-unknown-none
 rustup component add rust-src
 rustup component add llvm-tools
 ```
 
-first.
+### Build
+
+To build the entire project, run the following
+
+```bash
+cargo build
+```
+
+To run it using qemu (qemu must be installed), you can just run `cargo run`
+
+If you only want to build the kernel without running it, you can still use `cargo build`. It will most likely print the location of the iso file for both UEFI and BIOS.
+
+If there are any errors that occur doring the build, most likely that is due to some unknown dependencies that may not be present. Running commands that were printed in the build process will most likely help you.
