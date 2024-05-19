@@ -15,6 +15,13 @@ fn main() {
     let bios_path = out_dir.join("bios.img");
     bootloader::BiosBoot::new(&kernel).create_disk_image(&bios_path).unwrap();
 
+    // create local disk images for testing
+    let current_dir = std::env::current_dir().unwrap();
+    let local_uefi_path = current_dir.join("uefi.img");
+    bootloader::UefiBoot::new(&kernel).create_disk_image(&local_uefi_path).unwrap();
+    let local_bios_path = current_dir.join("bios.img");
+    bootloader::BiosBoot::new(&kernel).create_disk_image(&local_bios_path).unwrap();
+
     // pass the disk image paths as env variables to the `main.rs`
     println!("cargo:rustc-env=UEFI_PATH={}", uefi_path.display());
     println!("cargo:rustc-env=BIOS_PATH={}", bios_path.display());
